@@ -4,62 +4,62 @@
 
 typedef struct
 {
-    int Number_of_flights;//·ÉĞĞ´ÎÊı
-    float total_cost;//ÀÛ¼Æ»¨Ïú
-    float total_mileage;//×ÜÀï³Ì
-}records;//ÀúÊ·¼ÇÂ¼
+    int Number_of_flights;//é£è¡Œæ¬¡æ•°
+    float total_cost;//ç´¯è®¡èŠ±é”€
+    float total_mileage;//æ€»é‡Œç¨‹
+}records;//å†å²è®°å½•
 
-typedef struct //³Ë¿Í¸öÈËĞÅÏ¢
+typedef struct //ä¹˜å®¢ä¸ªäººä¿¡æ¯
 {
-    bool VIP;//ÊÇ·ñÎªVIP
+    bool VIP;//æ˜¯å¦ä¸ºVIP
     char name[20];
-    char ID_card[19];//18Î»Éí·İÖ¤
-    char contact_information[12];//ÁªÏµ·½Ê½
-    char Password[20];//ÃÜÂë
+    char ID_card[19];//18ä½èº«ä»½è¯
+    char contact_information[12];//è”ç³»æ–¹å¼
+    char Password[20];//å¯†ç 
 
 
-    char fancy[50];//ÂÃ¿ÍÆ«ºÃ
-    records PersonalLog;//ÀúÊ·¼ÇÂ¼
+    char fancy[50];//æ—…å®¢åå¥½
+    records PersonalLog;//å†å²è®°å½•
 }Passenger;  //this is also the basic part
-typedef struct //¹ÜÀíÔ±¸öÈËĞÅÏ¢
+typedef struct //ç®¡ç†å‘˜ä¸ªäººä¿¡æ¯
 {
     char name[20];
-    char contact_information[12];//ÁªÏµ·½Ê½
-    char Password[20];//ÃÜÂë
+    char contact_information[12];//è”ç³»æ–¹å¼
+    char Password[20];//å¯†ç 
 
 }Administrator;  //this is also the radical part
 
 
 
-enum TicketPrice //×ùÎ»¼Û¸ñ
+enum TicketPrice //åº§ä½ä»·æ ¼
 {
-    first_class_price = 2000,   //Í·µÈ²Õ¼Û¸ñ
-    business_class_price = 1000,//ÉÌÎñ²Õ¼Û¸ñ
-    economy_class_price = 500   //¾­¼Ã²Õ¼Û¸ñ
+    first_class_price = 2000,   //å¤´ç­‰èˆ±ä»·æ ¼
+    business_class_price = 1000,//å•†åŠ¡èˆ±ä»·æ ¼
+    economy_class_price = 500   //ç»æµèˆ±ä»·æ ¼
 };
 
 typedef struct
 {
-    bool booked;          //¸Ã×ùÎ»ÊÇ·ñ±»Ô¤¶¨
-    enum TicketPrice price;  //¸Ã×ùÎ»µÈ¼¶¼°¼Û¸ñ
-    Passenger Infor;  //¸Ã×ùÎ»³Ë¿ÍĞÅÏ¢
+    bool booked;          //è¯¥åº§ä½æ˜¯å¦è¢«é¢„å®š
+    enum TicketPrice price;  //è¯¥åº§ä½ç­‰çº§åŠä»·æ ¼
+    Passenger Infor;  //è¯¥åº§ä½ä¹˜å®¢ä¿¡æ¯
 }seat_information;
 
 typedef struct 
 {
-    char FlightNumber[20];//º½°àºÅ
-    char departure[20];//Æğ·ÉµØ
-    char destination[20];//Ä¿µÄµØ
-    char departureTime[20];//Æğ·ÉÊ±¼ä
-    char arrivalTime[20];//µ½´ïÊ±¼ä
+    char FlightNumber[20];//èˆªç­å·
+    char departure[20];//èµ·é£åœ°
+    char destination[20];//ç›®çš„åœ°
+    char departureTime[20];//èµ·é£æ—¶é—´
+    char arrivalTime[20];//åˆ°è¾¾æ—¶é—´
 
-    bool sunny_slope;//ÊÇ·ñÏòÑô
+    bool sunny_slope;//æ˜¯å¦å‘é˜³
 
 
-    seat_information seats[MAX_ROWS][MAX_COLS];//¸Ã¼Ü´Îº½°à×ùÎ»ĞÅÏ¢  Ò»ÅÅ6Î» ¹²40ÅÅ
-    //Ôİ¶¨ËÄÅÅÍ·µÈ²Õ °ËÅÅÉÌÎñ²Õ Ê£ÓàÎª¾­¼Ã²Õ 
-    int availableSeats;//Ê£Óà¿ÉÓÃ×ùÎ»
-}Flight;    //º½°àĞÅÏ¢     this is the basic part
+    seat_information seats[MAX_ROWS][MAX_COLS];//è¯¥æ¶æ¬¡èˆªç­åº§ä½ä¿¡æ¯  ä¸€æ’6ä½ å…±40æ’
+    //æš‚å®šå››æ’å¤´ç­‰èˆ± å…«æ’å•†åŠ¡èˆ± å‰©ä½™ä¸ºç»æµèˆ± 
+    int availableSeats;//å‰©ä½™å¯ç”¨åº§ä½
+}Flight;    //èˆªç­ä¿¡æ¯     this is the basic part
 
 void initializeAirplane(int FlightNumber);
 void displayAirplaneStatus(int FlightNumber);
@@ -74,7 +74,7 @@ void Rank(Passenger wyl, Flight NEU[]);
 void Count(Passenger wyl, Flight NEU[]);
 void Ad_regulation(Administrator NEUer[], Flight NEU[]);
 void SystemMaintenance(Administrator NEUer[], Flight NEU[]);
-
+void displayMenu();
 
 
 
