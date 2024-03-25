@@ -4,16 +4,14 @@
 #include"statement.h"
 
 
-#define FLIGHT 10
-
+Flight NEU[20];//NEU航空的二十个航班
+Administrator NEUer[5];//五个管理员
+Passenger FBI[500];//五百个乘客
 int main(void)
 {
 	
 }
 
-Flight NEU[20];//NEU航空的二十个航班
-Administrator NEUer[5];//五个管理员
-Passenger FBI[500];//五百个乘客
 
 
 void initializeAirplane(int FlightNumber)// 初始化飞机座位状态
