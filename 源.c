@@ -79,27 +79,27 @@ void cancelSeat(int row, int col, int FlightNumber) // 取消预订座位
 //这里调用了航班信息与个人信息 
 // 因为题目要求包含对两种信息查询与修改的需求 功能都写上 用不上没事
 //最后应该都要加上将结构体中的数据读写到文件中 这个还不会 之后再加上 先把现在能写的函数写好
-void Register(Passenger wyl, Flight NEU[])//初次注册信息 直接把结构体拉进来加数据
+void Register(Passenger* wyl, Flight NEU[])//初次注册信息 直接把结构体拉进来加数据
 {
     //注册，录入自己的信息，包括姓名、联系电话等；
     //内容格式参考Passenger部分进行填充
 }
-void ReRegister(Passenger wyl, Flight NEU[])//修改个人信息 直接把结构体拉进来改数据
+void ReRegister(Passenger* wyl, Flight NEU[])//修改个人信息 直接把结构体拉进来改数据
 {
     //对自己的信息进行修改
 }
-void Inquire(Passenger wyl, Flight NEU[])//查询及预定航班
+void Inquire(Passenger* wyl, Flight NEU[])//查询及预定航班
 {
     //对各种信息（包括航班预订信息）进行查询，包括简单、组合、模糊查询，
     // 例如查询某天某个航班是否有空余座位、查询自己的所有预订情况等
 }
-void Rank(Passenger wyl, Flight NEU[])//信息排序
+void Rank(Passenger* wyl, Flight NEU[])//信息排序
 {
     //对各种信息（包括航班预订信息）进行排序，包括按单一属性、按多属性排序等，
     // 尽可能对查询结果进行多种排序（例如对查询出来的航班按照价格进行升序排序）
 
 }
-void Count(Passenger wyl, Flight NEU[])//信息统计
+void Count(Passenger* wyl, Flight NEU[])//信息统计
 {
     //对各种信息（包括航班预订信息）进行统计，
     // 包括按单一属性、按多属性统计、预设统计、按条件统计等
