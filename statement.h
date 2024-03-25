@@ -67,11 +67,11 @@ void displayAirplaneStatus(int FlightNumber);
 void bookSeat(int row, int col, int FlightNumber);
 void cancelSeat(int row, int col, int FlightNumber);
 
-void Register(Passenger wyl, Flight NEU[]);
-void ReRegister(Passenger wyl, Flight NEU[]);
-void Inquire(Passenger wyl, Flight NEU[]);
-void Rank(Passenger wyl, Flight NEU[]);
-void Count(Passenger wyl, Flight NEU[]);
+void Register(Passenger* wyl, Flight NEU[]);
+void ReRegister(Passenger* wyl, Flight NEU[]);
+void Inquire(Passenger* wyl, Flight NEU[]);
+void Rank(Passenger* wyl, Flight NEU[]);
+void Count(Passenger* wyl, Flight NEU[]);
 void Ad_regulation(Administrator NEUer[], Flight NEU[]);
 void SystemMaintenance(Administrator NEUer[], Flight NEU[]);
 void displayMenu();
