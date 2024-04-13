@@ -33,7 +33,7 @@ int main(void)
 	while(1){
 		printf("                 @@@@@***************************欢迎使用航班订票系统***************************@@@@@\n");
 		printf("                 ###                              1 录 入 乘 客 信 息                             ###\n");
-                printf("                 @@@                              2 查 看 航 班 信 息                             @@@\n");
+        printf("                 @@@                              2 查 看 航 班 信 息                             @@@\n");
 		printf("                 #####!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#####\n");
 		printf("请选择: ");
 		scanf("%d",&i);
@@ -122,7 +122,8 @@ void printList(struct Passenger* head)
         printf("Name: %s\n", current->name);
         printf("ID Card: %s\n", current->idcard);
         printf("Contact Information: %s\n", current->contact_information);
-        printf("Password: %s\n", current->password);
+        printf("Password: %s\n", current->password); 
+        printf("Fancy: %s\n", current->Registration_number);
         printf("Fancy: %s\n", current->fancy);
         printf("Seat: %s %s\n", current->seat[0], current->seat[1]);
         printf("\n");
@@ -140,6 +141,7 @@ void freeList(struct Passenger* head)
         free(temp->idcard);
         free(temp->contact_information);
         free(temp->password);
+        free(temp->Registration_number);
         free(temp->fancy);
         free(temp);
     }
