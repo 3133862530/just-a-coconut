@@ -15,7 +15,7 @@ typedef struct //乘客个人信息
     char idcard[19];//18位身份证
     char contact_information[12];//联系方式
     char password[20];//密码
-    int Registration_number;//注册编号 UID
+    int Registration_number[20];//注册编号 UID
     char fancy[50];//旅客偏好
     char seat[2][3];//座位 例：13 A
     Passenger* next;
