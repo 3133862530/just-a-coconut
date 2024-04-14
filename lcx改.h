@@ -40,22 +40,22 @@ enum TicketPrice //座位价格
     economy_class_price = 500   //经济舱价格
 };//建议删除直接加到函数中直接打印，或者直接算
 
-typedef struct //航班信息
+struct Flight//航班信息
 {
     char flightnumber;//航班号
     char departure;//起飞地
     char destination;//目的地
-    int departureTime;//起飞时间//输入时用【时分秒】的形式输入（每个单位两位，没有的用0）
-    int arrivalTime;//到达时间//直接用%s输入
+    char departureTime;//起飞时间//输入时用【时分秒】的形式输入（每个单位两位，没有的用0）
+    char arrivalTime;//到达时间
     int  mile;//距离
     int  headseat;//头等舱数量
     int  economyseat;//经济舱数量
     int  business;//商务舱数量
     int availableSeats;//剩余可用座位
-    seat_information seats[MAX_ROWS][MAX_COLS];//该架次航班座位信息  一排6位 共40排
-    //暂定四排头等舱 八排商务舱 剩余为经济舱    
-    Flight* next;
-}Flight;    //航班信息     this is the basic part
+    //seat_information seats[MAX_ROWS][MAX_COLS];//该架次航班座位信息  一排6位 共40排//暂定四排头等舱 八排商务舱 剩余为经济舱
+        
+    struct Flight* next;
+};    //航班信息     this is the basic part
 
 void initializeAirplane(int FlightNumber);
 void displayAirplaneStatus(int FlightNumber);
